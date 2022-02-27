@@ -12,8 +12,5 @@ RUN chown -R www-data:www-data /var/www/html
 # others hanya read
 RUN chmod -R ug=rwx,o=r /var/www/html
 
-# menginstall php mysqli extension
-RUN docker-php-ext-install -j4 mysqli
-
 # mengekspose port 80
 EXPOSE 80
